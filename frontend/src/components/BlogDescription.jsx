@@ -7,7 +7,7 @@ export default function BlogDescription() {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://freelog-backend.onrender.com/${id}`)
+    axios.get(`http://localhost:5000/api/blogs/${id}`)
       .then(res => setBlog(res.data))
       .catch(err => console.error('Error fetching blog description:', err));
   }, [id]);
